@@ -3,4 +3,98 @@
 // @import "css/head.scss";
 // @import "blocks/header.scss";
 a {
- font-size: 56px;}
+// font-size: 56px;
+animation: shadow  2s infinite ease-in-out;
+}
+
+html,
+body {
+  padding:0;
+  margin:0;
+
+// animation: body-ani 15s infinite ease-in-out;
+
+}
+
+p,
+a,
+h1,
+h2 {
+  padding:0;
+  margin:0;
+}
+@keyframes body-ani {
+  0% {background-image: url("https://wallpapercave.com/wp/wp2869225.jpg");}
+  50% {background-image: url("https://static.giantbomb.com/uploads/original/1/10333/2702699-mge%20screenshot%202014-11-20%2013.56.22.869.png");
+
+}
+100% {background-image: url("http://wallfon.com/walls/games/morrowind-morning.jpg");}
+}
+
+@keyframes shadow {
+  from {text-shadow: 0 0 3px black;}
+  50% {text-shadow: 0 0 30px black;}
+  to {text-shadow: 0 0 3px black;}
+}
+* {
+outline:2px solid green;
+outline-offset: -10px;
+}
+.flex-col {
+
+
+
+
+}
+
+.wd-80 {
+  width: 80%;
+}
+
+body,
+div {
+  margin:0;
+  padding:0;
+// outline:2px solid red;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+// flex-wrap: wrap;
+align-content: center;
+align-items: center;
+justify-content: space-around;
+
+}
+body {
+  height: 100vh;
+}
+div {
+  height: 100vh;
+    // visibility: visible;
+   
+}
+
+p {
+  font-size: 18px;
+}
+.start {
+  padding: 2%;
+  font-size: 200%;
+  border-radius: 15px;
+  background-color: transparent;
+  text-shadow: 1px 5px 5px black;
+}
+
+.showing {
+     clip: auto;
+    visibility: visible;
+}
+
+.hidden {
+  visibility: hidden ;
+      position: absolute;
+    top: 0;
+    left: 0;
+    clip: rect(0 0 0 0);
+    visibility: hidden;
+}
