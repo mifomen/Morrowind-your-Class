@@ -4,7 +4,9 @@
 // @import "blocks/header.scss";
 a {
 // font-size: 56px;
-animation: shadow  2s infinite ease-in-out;
+// animation: shadow  2s infinite ease-in-out;
+
+font-size: 1.5em;
 }
 
 html,
@@ -22,6 +24,7 @@ h1,
 h2 {
   padding:0;
   margin:0;
+  font-family: 'Roboto', sans-serif;
 }
 @keyframes body-ani {
   0% {background-image: url("https://wallpapercave.com/wp/wp2869225.jpg");}
@@ -36,10 +39,10 @@ h2 {
   50% {text-shadow: 0 0 30px black;}
   to {text-shadow: 0 0 3px black;}
 }
-* {
-  outline:2px solid green;
-  outline-offset: -2px;
-}
+// * {
+//   outline:2px solid green;
+//   outline-offset: -2px;
+// }
 .flex-col {
 
 
@@ -49,6 +52,8 @@ h2 {
 
 .wd-80 {
   width: 80%;
+  border: 12px solid green;
+  padding: 1%;
 }
 
 body,
@@ -92,9 +97,49 @@ p {
   top: 0;
   left: 0;
   clip: rect(0 0 0 0);
+  width:100%;
 
 }
 .showing {
   clip: auto;
   visibility: visible;
+
+}
+
+.resault {
+
+text-align: center;
+font-size: 2em;
+text-shadow: 1px 1px 5px black;
+
+}
+.red {
+  font-size: 4em;
+  margin-top: 5%;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  
+}
+
+
+h1 {
+  border: 15px solid darkblue;
+  border-radius: 25px;
+  padding: 2% 5%;
+}
+
+a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+text-decoration: underline;
+text-shadow: 1px 1px 25px black;
+
 }
