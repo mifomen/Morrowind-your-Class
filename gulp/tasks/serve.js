@@ -9,9 +9,8 @@ module.exports = function () {
       ui: false
     }),
     $.gulp.watch("src/scss/**/*.scss",  $.gulp.parallel('scss'));
-    $.gulp.watch("src/pug/**/*.pug",  $.gulp.parallel('pug'));
-    $.gulp.watch("src/**/index.pug",  $.gulp.parallel('pug'));
-    $.gulp.watch("src/html/**/*.html",  $.gulp.parallel('pug'));
+    $.gulp.watch("src/**/*.pug",  $.gulp.parallel('pug'));
+    $.gulp.watch("src/**/*.html",  $.gulp.parallel('pug'));
     $.gulp.watch("src/js/**/*.js",  $.gulp.parallel('script'));
     // $.gulp.watch("src/pug/html2pug/*.html",  $.gulp.series('html2pug','pug'));
      $.gulp.watch("src/img/**/*.{png,jpg,svg}",  $.gulp.parallel('img'));

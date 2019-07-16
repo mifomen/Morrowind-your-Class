@@ -4,8 +4,8 @@ module.exports = function () {
     .pipe($.gp.sourcemaps.init())
     .pipe($.gp.plumber())
     .pipe($.gp.sass()).on('error', $.gp.sass.logError)
-    .pipe($.gp.sourcemaps.write({includeContente: false, sourceRoot: '.'}))// delete ?
-    .pipe($.gp.sourcemaps.init({loadMaps: true})) // delete ?
+    // .pipe($.gp.sourcemaps.write({includeContente: false, sourceRoot: '.'}))// delete ?
+    // .pipe($.gp.sourcemaps.init({loadMaps: true})) // delete ?
     .pipe($.gp.postcss([
       $.mqpacker({ sort: true })
       ])
@@ -23,7 +23,7 @@ module.exports = function () {
     .pipe($.gp.stripCssComments()) 
     .pipe($.gp.csso()) 
     .pipe($.gp.rename('style.min.css'))
-    .pipe($.gp.sourcemaps.write('.')) // delete ',' ? ok ?
+    // .pipe($.gp.sourcemaps.write('.')) // delete ',' ? ok ?
     .pipe($.gulp.dest('build/css'))
     .pipe($.bs.reload({
       stream: true

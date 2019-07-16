@@ -3,19 +3,19 @@
 // @import "css/head.scss";
 // @import "blocks/header.scss";
 a {
-// font-size: 56px;
-// animation: shadow  2s infinite ease-in-out;
-
-font-size: 1.5em;
+  font-size: 100%;
 }
 
 html,
 body {
   padding:0;
   margin:0;
-
+  background-color: black;
+  background-image: url("https://wallpapercave.com/wp/wp2869225.jpg");
+  background-size: cover;
+  background-position: 40% 50%;
 // animation: body-ani 15s infinite ease-in-out;
-
+transition: 300ms ease;
 }
 
 p,
@@ -26,23 +26,30 @@ h2 {
   margin:0;
   font-family: 'Roboto', sans-serif;
 }
-@keyframes body-ani {
-  0% {background-image: url("https://wallpapercave.com/wp/wp2869225.jpg");}
-  50% {background-image: url("https://static.giantbomb.com/uploads/original/1/10333/2702699-mge%20screenshot%202014-11-20%2013.56.22.869.png");
+@keyframes fadeIn {
+ 0% {opacity: 0;}
+ 100% {opacity: 1;}
+} 
 
-}
-100% {background-image: url("http://wallfon.com/walls/games/morrowind-morning.jpg");}
-}
+// @keyframes body-ani {
+//   0% {background-image: url("https://wallpapercave.com/wp/wp2869225.jpg");
+// opacity:1;
+// }
+//   50% {opacity:1;
+//     background-image: url("https://static.giantbomb.com/uploads/original/1/10333/2702699-mge%20screenshot%202014-11-20%2013.56.22.869.png");
+
+// }
+// 100% {
+// opacity:1;
+//   background-image: url("http://wallfon.com/walls/games/morrowind-morning.jpg");}
+// }
 
 @keyframes shadow {
   from {text-shadow: 0 0 3px black;}
   50% {text-shadow: 0 0 30px black;}
   to {text-shadow: 0 0 3px black;}
 }
-// * {
-//   outline:2px solid green;
-//   outline-offset: -2px;
-// }
+
 .flex-col {
 
 
@@ -50,11 +57,7 @@ h2 {
 
 }
 
-.wd-80 {
-  width: 80%;
-  border: 12px solid green;
-  padding: 1%;
-}
+
 
 body,
 div {
@@ -65,28 +68,31 @@ div {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   box-sizing: border-box;
-}
-body {
-  // height: 100vh;
-}
-div {
   height: 100vh;
   padding: 5%;
-// visibility: visible;
-
 }
 
-p {
-  font-size: 1em;
+div>a {
+  margin-top: 15%;
 }
+
+
 .start {
   padding: 2%;
   font-size: 200%;
   border-radius: 15px;
-  background-color: transparent;
-  text-shadow: 1px 5px 5px black;
+  background-color: white;
+  text-shadow: 3px 3px 15px black;
+  transition: 300ms ease;
+
+}
+.start:focus,
+.start:hover {
+  transition: 300ms ease;
+  background-color: #333;
+  color: white;
 }
 
 
@@ -106,17 +112,24 @@ p {
 
 }
 
+.PS,
 .resault {
 
-text-align: center;
-font-size: 2em;
-text-shadow: 1px 1px 5px black;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 1px 1px 1px white,
+  -1px -1px 1px white,
+  1px -1px 1px white,
+  -1px 1px 1px white;
+    font-size: 4em;
+  margin-top: 5%;
 
 }
-.red {
-  font-size: 4em;
-  margin-top: 5%;
+.PS {
+  font-size: 150%;
+  margin-top: 10%;
 }
+
 .center {
   display: flex;
   align-items: center;
@@ -130,16 +143,54 @@ h1 {
   border: 15px solid darkblue;
   border-radius: 25px;
   padding: 2% 5%;
+  color:white;
+  text-shadow: 1px 1px 25px black;
+}
+h2 {
+  color: white;
+  text-shadow: 1px 1px 25px black;
+    margin-top: 5%
 }
 
 a {
   font-weight: bold;
   color: black;
   text-decoration: none;
+  text-shadow: 1px 1px 1px white,
+  -1px -1px 1px white,
+  1px -1px 1px white,
+  -1px 1px 1px white;
 }
 a:hover,
 a:focus {
-text-decoration: underline;
-text-shadow: 1px 1px 25px black;
+  text-decoration: underline;
+  
 
+}
+
+.wd-80 {
+  width: 90%;
+  border: 10px solid white;
+  color: white;
+  border-radius: 25px;
+  padding: 3%;
+  font-size: 80%;
+  text-shadow: 1px 1px 1px black,
+  -1px -1px 1px black,
+  1px -1px 1px black,
+  -1px 1px 1px black;
+  margin-top: 5%
+}
+
+.wd-90 {
+  width: 90%;
+  border: 10px solid white;
+  color: white;
+  border-radius: 25px;
+  padding: 3%;
+  font-size: 100%;
+  text-shadow: 1px 1px 1px black,
+  -1px -1px 1px black,
+  1px -1px 1px black,
+  -1px 1px 1px black;
 }
