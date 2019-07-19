@@ -1,0 +1,97 @@
+@media (max-width: 767px) {
+  /* стили для xs-устройств */
+ .start,
+ h1,
+ h2 {
+  font-size: 250%;
+}
+.wd-80 {
+  font-size: 170%;
+}
+.wd-90,
+a { 
+  font-size: 220%;
+}
+.resault,.PS {
+  font-size: 300%;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* стили для sm-устройств */
+ .start,
+ h1,
+ h2 {
+  font-size: 300%;
+}
+.wd-80 {
+  font-size: 200%;
+}
+.wd-90,
+a { 
+  font-size: 250%;
+}
+.resault,.PS {
+  font-size: 500%;
+}
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  /* стили для md-устройств */
+
+ .start,
+ h1,
+ h2 {
+  font-size: 300%;
+}
+.wd-80 {
+  font-size: 200%;
+}
+.wd-90,
+a { 
+  font-size: 250%;
+}
+.resault,.PS {
+  font-size: 500%;
+}
+}
+@media (min-width: 1200px) {
+.start {
+  padding:0.75%;
+}
+ .start,
+ h1,
+ h2 {
+  font-size: 350%;
+}
+.wd-80 {
+  font-size: 175%;
+}
+.wd-90,
+a { 
+  font-size: 250%;
+}
+.resault,.PS {
+  font-size: 600%;
+}
+
+/* стили для lg-устройств */
+}
+@media (min-width: 2000px) {
+
+ .start,
+ h1,
+ h2 {
+  font-size: 400%;
+}
+.wd-80 {
+  font-size: 250%;
+}
+.wd-90,
+a { 
+  font-size: 300%;
+}
+.resault,.PS {
+  font-size: 600%;
+}
+
+/* стили для lg-устройств */
+}

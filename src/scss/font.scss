@@ -1,0 +1,34 @@
+/* cyrillic-ext */
+$fontStyle: normal;
+$fontDisplay: auto; //block swap auto
+@font-face {
+  font-family: 'Magic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fontStyle;
+  font-style: $fontStyle;
+  src: url(../fonts/Magic-Cards-Russian.woff) format('woff'),
+  url(../fonts/Magic-Cards-Russian.tiff) format('tiff');
+}
+
+@font-face {
+  font-family: 'Magic';
+  src: url(/fonts/Magic-Cards-Russian.woff);
+
+}
+
+// $defaultFont: 'Arial', 'Times New Roman', sans-serif;
+
+// $fontRoboto: 'Roboto', $defaultFont;
+
+// $CirceBold: 'Circe-Bold', 'Times New Roman', sans-serif;
+// $CirceRegular: 'CirceRegular', 'Times New Roman', sans-serif;
+// $IntroScriptRH2Base: 'IntroScriptRH2Base', 'Times New Roman', sans-serif;
+// $PlayFairBold: 'playfair-display-bold', 'Times New Roman', sans-serif;
+// $RobotoRegular: 'RobotoRegular', 'Times New Roman', sans-serif;
+// $PlayfairBoldItalic: 'PlayfairDisplay-BlackItalic', 'Times New Roman', sans-serif;
+// $MyriadProBlack: 'MyriadPro-Black', 'Times New Roman', sans-serif;
+
+// $fontStyle: normal;
+// $fontDisplay: auto; //block swap auto
+

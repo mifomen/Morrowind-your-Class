@@ -2,12 +2,15 @@
 // @import "css/main-style.scss";
 // @import "css/head.scss";
 // @import "blocks/header.scss";
-a {
-  font-size: 100%;
-}
+@import "font.scss";
+@import "media.scss";
 
+* {
+  cursor: default;
+}
 html,
 body {
+  cursor: url(img/cusor.png);
   padding:0;
   margin:0;
   background-color: black;
@@ -16,6 +19,8 @@ body {
   background-position: 40% 50%;
 // animation: body-ani 15s infinite ease-in-out;
 transition: 300ms ease;
+ // cursor: url(img/cursor.cur), default;
+
 }
 
 p,
@@ -24,43 +29,19 @@ h1,
 h2 {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
-}
-@keyframes fadeIn {
- 0% {opacity: 0;}
- 100% {opacity: 1;}
-} 
-
-// @keyframes body-ani {
-//   0% {background-image: url("https://wallpapercave.com/wp/wp2869225.jpg");
-// opacity:1;
-// }
-//   50% {opacity:1;
-//     background-image: url("https://static.giantbomb.com/uploads/original/1/10333/2702699-mge%20screenshot%202014-11-20%2013.56.22.869.png");
-
-// }
-// 100% {
-// opacity:1;
-//   background-image: url("http://wallfon.com/walls/games/morrowind-morning.jpg");}
-// }
-
-@keyframes shadow {
-  from {text-shadow: 0 0 3px black;}
-  50% {text-shadow: 0 0 30px black;}
-  to {text-shadow: 0 0 3px black;}
-}
-
-.flex-col {
+  font-family: 'Magic';
+   // cursor: url(img/cursor.cur), default;
 
 
+ }
+ a:hover,
+ a:focus {
+
+ }
 
 
-}
-
-
-
-body,
-div {
+ body,
+ div {
   margin:0;
   padding:0;
   min-height: 100vh;
@@ -68,32 +49,33 @@ div {
   flex-direction: column;
   align-content: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   box-sizing: border-box;
   height: 100vh;
   padding: 5%;
 }
 
-div>a {
-  margin-top: 15%;
+div > a {
+  // margin-top: 15%;
 }
 
 
 .start {
   padding: 2%;
   font-size: 200%;
-  border-radius: 15px;
-  background-color: white;
+
+
   text-shadow: 3px 3px 15px black;
   transition: 300ms ease;
-
+  color: #c39f5d;
+  border: 7px solid #a78952;
+  background-color: rgba(4,3,3,0.8);
 }
 .start:focus,
 .start:hover {
   transition: 300ms ease;
-  background-color: #333;
-  color: white;
-}
+
+}    
 
 
 
@@ -121,7 +103,7 @@ div>a {
   -1px -1px 1px white,
   1px -1px 1px white,
   -1px 1px 1px white;
-    font-size: 4em;
+  font-size: 4em;
   margin-top: 5%;
 
 }
@@ -135,62 +117,74 @@ div>a {
   align-items: center;
   justify-content: center;
   align-content: center;
-  
+
 }
 
 
-h1 {
-  border: 15px solid darkblue;
-  border-radius: 25px;
-  padding: 2% 5%;
-  color:white;
-  text-shadow: 1px 1px 25px black;
+
+
+h1,h2 {
+  padding: 1% 3%;
+ color: #cbb791;
+ border: 7px solid #a78952;
+ background-color: rgba(4,3,3,0.8);
+
 }
 h2 {
-  color: white;
-  text-shadow: 1px 1px 25px black;
-    margin-top: 5%
+
+
 }
 
+
+
+.wd-80 {
+
+  width: 90%;
+  border: 7px solid #a78952;
+  color: #cbb791;
+    // border-radius: 25px;
+    padding: 1%;
+    font-size: 120%;
+    // text-shadow: 1px 1px 1px black,
+    // -1px -1px 1px black,
+    // 1px -1px 1px black,
+    // -1px 1px 1px black;
+    // margin-top: 5%;
+    background-color: rgba(4,3,3,0.8);
+  }
+
+  .wd-90 {
+
+    width: 90%;
+
+    border: 7px solid #a78952;
+    color: #cbb791;
+    padding: 1%;
+    font-size: 120%;
+    background-color: rgba(4,3,3,0.8);
+
+    display: flex;
+    flex-direction: column;
+  // align-content: center;
+  align-items: center;
+  // justify-content: space-between;
+}
 a {
   font-weight: bold;
-  color: black;
+  color: #cbb791;
   text-decoration: none;
-  text-shadow: 1px 1px 1px white,
-  -1px -1px 1px white,
-  1px -1px 1px white,
-  -1px 1px 1px white;
+  background-color: rgba(4,3,3,0.8);
+  font-size: 120%;
+  border: 7px solid #a78952;
+  color: #cbb791;
+  padding: 1%;
+  font-size: 120%;
+  background-color: rgba(4,3,3,0.8);
+
 }
 a:hover,
 a:focus {
   text-decoration: underline;
-  
 
-}
 
-.wd-80 {
-  width: 90%;
-  border: 10px solid white;
-  color: white;
-  border-radius: 25px;
-  padding: 3%;
-  font-size: 80%;
-  text-shadow: 1px 1px 1px black,
-  -1px -1px 1px black,
-  1px -1px 1px black,
-  -1px 1px 1px black;
-  margin-top: 5%
-}
-
-.wd-90 {
-  width: 90%;
-  border: 10px solid white;
-  color: white;
-  border-radius: 25px;
-  padding: 3%;
-  font-size: 100%;
-  text-shadow: 1px 1px 1px black,
-  -1px -1px 1px black,
-  1px -1px 1px black,
-  -1px 1px 1px black;
 }

@@ -1,3 +1,11 @@
+// var elms = document.getElementsByTagName("*");
+// var n = elms.length;
+// for(var i = 0; i < n; i ++) {
+//     if(window.getComputedStyle(elms[i]).cursor == "pointer") {
+//         elms[i].style.cursor = "url(img/cursor.ico)";
+//     }
+// }
+
 var arr = document.getElementsByTagName('div')
 var N=1
 
@@ -103,7 +111,7 @@ var resault = function() {
                                    if (CombatIndex==3 && MagicIndex==4 && StealthIndex==4) {
                                     document.querySelector('.combat').textContent = 'Bard';
                                   } else {
-                                   if (CombatIndex==3 && MagicIndex==2 && StealthIndex==6) {
+                                   if (CombatIndex==3 && MagicIndex==2 && StealthIndex==5) {
                                     document.querySelector('.combat').textContent = 'Pilgrim';
                                   } else {
                                    if (CombatIndex==3 && MagicIndex==1 && StealthIndex==6) {
