@@ -52,106 +52,106 @@ var Stealth = function () {
 var resault = function() {
 
   if (CombatIndex>6 && MagicIndex>-1 && MagicIndex<4 && StealthIndex>-1 && StealthIndex<4) {
-    document.querySelector('.combat').textContent = 'Warrior';
+    document.querySelector('.combat').textContent = 'Воин';
   } else {
     if (CombatIndex>-1 && CombatIndex<4 && MagicIndex>6 && StealthIndex>-1 && StealthIndex<4) {
-      document.querySelector('.combat').textContent = 'Mage';
+      document.querySelector('.combat').textContent = 'Маг';
     } else {
       if (CombatIndex>-1 && CombatIndex<4 && MagicIndex>-1 && MagicIndex<4 && StealthIndex>6) {
-        document.querySelector('.combat').textContent = 'Thief';
+        document.querySelector('.combat').textContent = 'Вор';
       } else {
         if (CombatIndex==6 && MagicIndex==4 && StealthIndex==0) {
-          document.querySelector('.combat').textContent = 'Knight';
+          document.querySelector('.combat').textContent = 'Рыцарь';
         } else {
           if (CombatIndex==6 && MagicIndex==3 && StealthIndex==1) {
-            document.querySelector('.combat').textContent = 'Barbarian';
+            document.querySelector('.combat').textContent = 'Варвар';
           } else {
             if (CombatIndex==6 && MagicIndex==2 && StealthIndex==2) {
-              document.querySelector('.combat').textContent = 'Knight';
+              document.querySelector('.combat').textContent = 'Рыцарь';
             } else {
               if (CombatIndex==6 && MagicIndex==1 && StealthIndex==3) {
-                document.querySelector('.combat').textContent = 'Crusader';
+                document.querySelector('.combat').textContent = 'Паладин';
               } else {
                 if (CombatIndex==6 && MagicIndex==0 && StealthIndex==4) {
-                  document.querySelector('.combat').textContent = 'Knight';
+                  document.querySelector('.combat').textContent = 'Рыцарь';
                 } else {
                   if (CombatIndex==5 && MagicIndex==5 && StealthIndex==0) {
-                    document.querySelector('.combat').textContent = 'Archer';
+                    document.querySelector('.combat').textContent = 'Лучник';
                   } else {
                     if (CombatIndex==5 && MagicIndex==4 && StealthIndex==1) {
-                      document.querySelector('.combat').textContent = 'Archer';
+                      document.querySelector('.combat').textContent = 'Лучник';
                     } else {
                       if (CombatIndex==5 && MagicIndex==3 && StealthIndex==2) {
-                        document.querySelector('.combat').textContent = 'Archer';
+                        document.querySelector('.combat').textContent = 'Лучник';
                       } else {
                         if (CombatIndex==5 && MagicIndex==2 && StealthIndex==3) {
                           document.querySelector('.combat').textContent = 'Scout';
                         } else {
                           if (CombatIndex==5 && MagicIndex==1 && StealthIndex==4) {
-                            document.querySelector('.combat').textContent = 'Archer';
+                            document.querySelector('.combat').textContent = 'Лучник';
                           } else {
                             if (CombatIndex==5 && MagicIndex==0 && StealthIndex==5) {
-                              document.querySelector('.combat').textContent = 'Archer';
+                              document.querySelector('.combat').textContent = 'Лучник';
                             } else {
                               if (CombatIndex==4 && MagicIndex==6 && StealthIndex==0) {
-                                document.querySelector('.combat').textContent = 'Healer';
+                                document.querySelector('.combat').textContent = 'Целитель';
                               } else {
                                 if (CombatIndex==4 && MagicIndex>-1 && MagicIndex<6 && StealthIndex>-1 && StealthIndex<7)  {
-                                  document.querySelector('.combat').textContent = 'Rogue';
+                                  document.querySelector('.combat').textContent = 'Жулик';
                                 } else {
                                   if (CombatIndex==3 && MagicIndex==6 && StealthIndex==1) {
-                                    document.querySelector('.combat').textContent = 'Healer';
+                                    document.querySelector('.combat').textContent = 'Целитель';
                                   } else {
                                    if (CombatIndex==3 && MagicIndex==5 && StealthIndex==2) {
-                                    document.querySelector('.combat').textContent = 'Witchhunter';
+                                    document.querySelector('.combat').textContent = 'Инквизитор';
                                   } else {
                                    if (CombatIndex==3 && MagicIndex==4 && StealthIndex==3) {
-                                    document.querySelector('.combat').textContent = 'Spellsword';
+                                    document.querySelector('.combat').textContent = 'Воин Слова';
                                   } else {
                                    if (CombatIndex==3 && MagicIndex==4 && StealthIndex==4) {
-                                    document.querySelector('.combat').textContent = 'Bard';
+                                    document.querySelector('.combat').textContent = 'Бард';
                                   } else {
                                    if (CombatIndex==3 && MagicIndex==2 && StealthIndex==5) {
-                                    document.querySelector('.combat').textContent = 'Pilgrim';
+                                    document.querySelector('.combat').textContent = 'Пилигрим';
                                   } else {
                                    if (CombatIndex==3 && MagicIndex==1 && StealthIndex==6) {
-                                    document.querySelector('.combat').textContent = 'Agent/Spy';
+                                    document.querySelector('.combat').textContent = 'Шпион';
                                   } else {
                                    if (CombatIndex==2 && MagicIndex==6 && StealthIndex==2) {
-                                    document.querySelector('.combat').textContent = 'Sorcerer';
+                                    document.querySelector('.combat').textContent = 'Чародей';
                                   } else {
                                    if (CombatIndex==2 && MagicIndex==5 && StealthIndex==3) {
-                                    document.querySelector('.combat').textContent = 'Witchhunter';
+                                    document.querySelector('.combat').textContent = 'Инквизитор';
                                   } else {
                                    if (CombatIndex==2 && MagicIndex==4 && StealthIndex==4) {
-                                    document.querySelector('.combat').textContent = 'Spellsword';
+                                    document.querySelector('.combat').textContent = 'Воин Слова';
                                   } else {
                                    if (CombatIndex==2 && MagicIndex==3 && StealthIndex==5) {
-                                    document.querySelector('.combat').textContent = 'Monk';
+                                    document.querySelector('.combat').textContent = 'Монах';
                                   } else {
                                    if (CombatIndex==2 && MagicIndex==2 && StealthIndex==6) {
-                                    document.querySelector('.combat').textContent = 'Acrobat';
+                                    document.querySelector('.combat').textContent = 'Акробат';
                                   } else {
                                    if (CombatIndex==1 && MagicIndex==6 && StealthIndex==3) {
-                                    document.querySelector('.combat').textContent = 'Battlemage';
+                                    document.querySelector('.combat').textContent = 'Боевой маг';
                                   } else {
                                    if (CombatIndex==1 && MagicIndex==5 && StealthIndex==4) {
-                                    document.querySelector('.combat').textContent = 'Witchhunter';
+                                    document.querySelector('.combat').textContent = 'Инквизитор';
                                   } else {
                                    if (CombatIndex==1 && MagicIndex==4 && StealthIndex==5) {
-                                    document.querySelector('.combat').textContent = 'Spellsword';
+                                    document.querySelector('.combat').textContent = 'Воин Слова';
                                   } else {
                                    if (CombatIndex==1 && MagicIndex==3 && StealthIndex==6) {
-                                   document.querySelector('.combat').textContent = 'Assassin';
+                                   document.querySelector('.combat').textContent = 'Ассассин';
                                    } else {
                                    if (CombatIndex==0 && MagicIndex==6 && StealthIndex==4) {
-                                   document.querySelector('.combat').textContent = 'Battlemage';
+                                   document.querySelector('.combat').textContent = 'Боевой маг';
                                    } else {
                                    if (CombatIndex==0 && MagicIndex==5 && StealthIndex==5) {
-                                   document.querySelector('.combat').textContent = 'Witchhunter';
+                                   document.querySelector('.combat').textContent = 'Инквизитор';
                                    } else {
                                    if (CombatIndex==0 && MagicIndex==4 && StealthIndex==6) {
-                                   document.querySelector('.combat').textContent = 'Nightblade';
+                                   document.querySelector('.combat').textContent = 'Меч ночи';
                                    } else {
                                    }
                                    }
