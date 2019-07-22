@@ -5,3 +5,4 @@ build
 *.zip
 npm-deubg.log
 *.log
+src/img/slide

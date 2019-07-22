@@ -249,14 +249,18 @@ var ArrayOfQestion = [
 
 
 // var Memory=0;
-var f1=0,f2=0,f3=0;
+// var f1=0,f2=0,f3=0;
 // console.log(getRndInteger(0,3))
 var CombatIndex=0
 var MagicIndex=0
-var StealthIndex=0
-
+var StealthIndex=1
+// var ch=12
 var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
   var NewDiv = document.createElement('div');
+  // let FullPath = 'url(' + '../img/slide/slide' + ch + '.jpg' + ')';
+  // ch--
+  // NewDiv.style.backgroundImage = FullPath;
+  // NewDiv.style.backgroundImage="url('../img/slide/slide1.jpg')";
   NewDiv.classList="hidden"
   var NewP = document.createElement('p')
   NewP.classList="wd-90"
@@ -332,7 +336,7 @@ if (RandomAnswer1===1) {
 // Create(Answer3,'StealthIndex')
 
 
-body.insertBefore(NewDiv,body.children[3]);
+body.insertBefore(NewDiv,body.children[4]);
 
 }
 
@@ -366,3 +370,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 // test()
+// 
+// 
+// slider on js
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var Interval = 8500; //time for change pictures
+var slideInterval = setInterval(nextSlide,Interval);
+// default time = 8500
+function nextSlide() {
+    slides[currentSlide].className = slides[currentSlide].className.replace(' showing-slide','');
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className += ' showing-slide'; 
+}
