@@ -1,3 +1,4 @@
+'use strict'
 // var elms = document.getElementsByTagName("*");
 // var n = elms.length;
 // for(var i = 0; i < n; i ++) {
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-let test = function () {
+var test = function () {
   return console.log('C=' + CombatIndex + ' M=' + MagicIndex + ' S=' + StealthIndex)
 }
 // console.log('work')
@@ -284,13 +285,13 @@ var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
   NewDiv.appendChild(NewLink);
 }
 
-let getRndInteger = function(min, max) {
+var getRndInteger = function(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
 var RandomAnswer1 = getRndInteger(0,3) 
 var RandomAnswer2 = getRndInteger(0,2) 
-console.log('RandomAnswer1= ' + RandomAnswer1 +  'RandomAnswer2= ' + RandomAnswer2)
+// console.log('RandomAnswer1= ' + RandomAnswer1 +  'RandomAnswer2= ' + RandomAnswer2)
 if (RandomAnswer1===0) {
   Create(Answer1,'CombatIndex')
 
@@ -304,7 +305,7 @@ if (RandomAnswer1===0) {
 }
 if (RandomAnswer1===2) {
   Create(Answer3,'StealthIndex')
-  RandomAnswer=getRndInteger(0,2)
+  RandomAnswer2=getRndInteger(0,2)
 
   if (RandomAnswer2===1) {
     Create(Answer1,'CombatIndex')
@@ -360,10 +361,10 @@ for (var i = 0; i < links.length; i++) {
 document.addEventListener("DOMContentLoaded", function () {
   // document.querySelector('.red').classList.remove('red')
   // 
-  for( let Index=9; Index>-1; Index--) {
+  for( var Index=9; Index>-1; Index--) {
     CreateQuestion(ArrayOfQestion[Index].Number,ArrayOfQestion[Index].Question1,ArrayOfQestion[Index].Question2,ArrayOfQestion[Index].Question3)
   }
   
 
 });
-test()
+// test()

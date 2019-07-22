@@ -24,7 +24,8 @@ module.exports = function () {
     $.gulp.task('script-min', function() {
     return $.gulp.src('src/js/main.js')
     .pipe($.gp.plumber())
-    .pipe($.gp.uglify())
+    // .pipe($.gp.minify())
+        .pipe($.gp.uglify())
     .pipe($.gp.rename('main.min.js'))
     .pipe($.gulp.dest('build/js'))
     .pipe($.bs.reload({
