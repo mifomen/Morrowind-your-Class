@@ -7,8 +7,8 @@ $fontDisplay: auto; //block swap auto
   font-weight: 400;
   font-display: fontStyle;
   font-style: $fontStyle;
-  src: url(../fonts/Magic-Cards-Russian.woff) format('woff'),
-  url(../fonts/Magic-Cards-Russian.tiff) format('tiff');
+  src: url(../fonts/Magic-Cards-Russian.woff) format('woff');
+  // url(fonts/Magic-Cards-Russian.tiff) format('tiff');
 }
 
 @font-face {
