@@ -1,4 +1,38 @@
-@media (max-width: 767px) {
+@media (min-width: 100px) and (max-width: 299px) { 
+.start,
+ h1,
+ h2 {
+  font-size: 55%;
+}
+.wd-80 {
+  font-size: 70%;
+}
+.wd-90,
+a { 
+  font-size: 90%;
+}
+.resault,.PS {
+  font-size: 100%;
+}
+}
+@media (min-width: 300px) and (max-width: 766px) { 
+.start,
+ h1,
+ h2 {
+  font-size: 100%;
+}
+.wd-80 {
+  font-size: 80%;
+}
+.wd-90,
+a { 
+  font-size: 120%;
+}
+.resault,.PS {
+  font-size: 250%;
+}
+}
+@media (min-width: 767px) {
   /* стили для xs-устройств */
  .start,
  h1,
@@ -21,17 +55,17 @@ a {
  .start,
  h1,
  h2 {
-  font-size: 300%;
+  font-size: 200%;
 }
 .wd-80 {
-  font-size: 200%;
+  font-size: 120%;
 }
 .wd-90,
 a { 
-  font-size: 250%;
+  font-size: 140%;
 }
 .resault,.PS {
-  font-size: 500%;
+  font-size: 300%;
 }
 }
 @media (min-width: 991px) and (max-width: 1199px) {
@@ -60,14 +94,14 @@ a {
  .start,
  h1,
  h2 {
-  font-size: 350%;
+  font-size: 300%;
 }
 .wd-80 {
-  font-size: 175%;
+  font-size: 150%;
 }
 .wd-90,
 a { 
-  font-size: 250%;
+  font-size: 220%;
 }
 .resault,.PS {
   font-size: 600%;
