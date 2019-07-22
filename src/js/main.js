@@ -75,7 +75,7 @@ var resault = function() {
                         document.querySelector('.combat').textContent = 'Лучник';
                       } else {
                         if (CombatIndex==5 && MagicIndex==2 && StealthIndex==3) {
-                          document.querySelector('.combat').textContent = 'Scout';
+                          document.querySelector('.combat').textContent = 'Разведчик';
                         } else {
                           if (CombatIndex==5 && MagicIndex==1 && StealthIndex==4) {
                             document.querySelector('.combat').textContent = 'Лучник';
@@ -262,8 +262,6 @@ var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
   NewP.classList="wd-90"
   NewDiv.appendChild(NewP);
   NewP.innerHTML=Text
-
-
 
   var Create = function (AnswerOne,SummaPlus) {
    var NewLink = document.createElement('a')

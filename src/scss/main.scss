@@ -106,7 +106,7 @@ div > a {
   -1px 1px 1px white;
   font-size: 4em;
   margin-top: 5%;
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 .PS {
   font-size: 150%;
@@ -126,9 +126,9 @@ text-transform: uppercase;
 
 h1,h2 {
   padding: 1% 3%;
- color: #cbb791;
- border: 7px solid #a78952;
- background-color: rgba(4,3,3,0.8);
+  color: #cbb791;
+  border: 7px solid #a78952;
+  background-color: rgba(4,3,3,0.8);
 
 }
 h2 {
@@ -155,15 +155,12 @@ h2 {
   }
 
   .wd-90 {
-
     width: 90%;
-
     border: 7px solid #a78952;
     color: #cbb791;
     padding: 1%;
     font-size: 120%;
     background-color: rgba(4,3,3,0.8);
-
     display: flex;
     flex-direction: column;
   // align-content: center;
@@ -191,11 +188,49 @@ a:focus {
 }
 
 .red {
-text-color: white;
-background-color: red;
-text-shadow: 1px 1px 1px white,
--1px -1px 1px white,
-1px -1px 1px white,
--1px 1px 1px white;
-border: 2px solid green;
+  text-color: white;
+  background-color: red;
+  text-shadow: 1px 1px 1px white,
+  -1px -1px 1px white,
+  1px -1px 1px white,
+  -1px 1px 1px white;
+  border: 2px solid green;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.title__img {
+  background-repeat: no-repeat;
+  background-image: url('../img/logo-503-119.png');
+  background-color: transparent;
+  min-width: 503px;
+  min-height: 119px;
+  max-height: 119px;
+}
+
+.center,
+.resault,
+.combat,
+.PS {
+  font-family: 'Magic';
+  text-shadow: 3px 3px 15px black;
+  transition: 300ms ease;
+  color: #c39f5d;
+  border: 7px solid #a78952;
+  background-color: rgba(4,3,3,0.8);
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0.75%;
+  padding-right: 0.75%;
+}
+.resault {
+  text-shadow: 1px 1px 1px hsl(39, 5%, 27%),
+  -1px -1px 1px hsl(39, 5%, 27%),
+  -1px 1px 1px hsl(39, 5%, 27%),
+  1px -1px 1px hsl(39, 5%, 27%);
+  padding:2%;
 }
