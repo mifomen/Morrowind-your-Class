@@ -28,7 +28,7 @@ module.exports = function () {
       // 'html',
       'img',
       // 'svg',
-      'scss',
+      'scss-final',
       // 'scripts:lib',
       'script-min'
       // $.gulp.parallel('html','img', 'scss'),

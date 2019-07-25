@@ -34,7 +34,7 @@
   },
   "scripts": {
     "test": "gulp build && gulp serve",
-    "start": "gulp build-final && gulp serve"
+    "start": "gulp build-final && gulp serve-final"
   },
   "repository": {
     "type": "git",

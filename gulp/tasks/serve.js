@@ -17,4 +17,19 @@ module.exports = function () {
     // $.gulp.watch("src/pug/html2pug/*.html",  $.gulp.series('html2pug','pug'));
       // $.gulp.watch("src/pug/*.html",  $.gulp.parallel('html'));
   })
+    $.gulp.task('serve-final', function (){
+    $.bs.init({
+      server: {
+        baseDir: 'build'
+      },
+      notify: false,
+      open: true,
+      ui: false
+    }),
+    $.gulp.watch("src/scss/**/*.scss",  $.gulp.parallel('scss-final'));
+    $.gulp.watch("src/**/*.pug",  $.gulp.parallel('pug'));
+    $.gulp.watch("src/**/*.html",  $.gulp.parallel('pug'));
+    $.gulp.watch("src/js/**/*.js",  $.gulp.parallel('script-min'));
+     $.gulp.watch("src/img/**/*.{png,jpg,svg}",  $.gulp.parallel('img'));
+  })
 }

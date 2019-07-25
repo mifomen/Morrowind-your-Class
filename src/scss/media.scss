@@ -1,21 +1,56 @@
 @media (min-width: 100px) and (max-width: 299px) { 
+.title__img {
+  min-width: 170px;
+  min-height: 40px;
+  max-height: 40px;
+}
 .start,
  h1,
  h2 {
-  font-size: 55%;
+  font-size: 110%;
+  border: 3px solid #a78952;
+}
+.start {
+  font-size: 150%;
 }
 .wd-80 {
-  font-size: 70%;
+  font-size: 75%;
+  border: 3px solid #a78952;
 }
 .wd-90,
 a { 
-  font-size: 90%;
+  font-size: 100%;
+  border: 3px solid #a78952;
 }
 .resault,.PS {
   font-size: 100%;
+  border: 3px solid #a78952;
 }
 }
-@media (min-width: 300px) and (max-width: 766px) { 
+@media (min-width: 300px) and (max-width: 550px) { 
+.title__img {
+  min-width: 270px;
+  min-height: 60px;
+  max-height: 60px;
+}
+.start,
+ h1,
+ h2 {
+  font-size: 120%;
+}
+.wd-80 {
+  font-size: 120%;
+}
+.wd-90,
+a { 
+  font-size: 140%;
+}
+.resault,.PS {
+  font-size: 180%;
+}
+}
+
+@media (min-width: 551px) and (max-width: 766px) { 
 .title__img {
   min-width: 350px;
   min-height: 83px;
@@ -24,14 +59,20 @@ a {
 .start,
  h1,
  h2 {
-  font-size: 100%;
+  font-size: 150%;
+    border: 3px solid #a78952;
+}
+.start {
+  font-size: 200%;
 }
 .wd-80 {
-  font-size: 80%;
+  font-size: 130%;
+    border: 3px solid #a78952;
 }
 .wd-90,
 a { 
-  font-size: 120%;
+  font-size: 175%;
+    border: 3px solid #a78952;
 }
 .resault,.PS {
   font-size: 250%;
@@ -57,59 +98,70 @@ a {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /* стили для sm-устройств */
- .start,
  h1,
  h2 {
-  font-size: 200%;
+  font-size: 210%;
+}
+.start {
+  font-size: 250%;
 }
 .wd-80 {
-  font-size: 120%;
+  font-size: 130%;
 }
 .wd-90,
 a { 
-  font-size: 140%;
+  font-size: 180%;
 }
 .resault,.PS {
-  font-size: 300%;
+  font-size: 340%;
+
 }
 }
 @media (min-width: 991px) and (max-width: 1199px) {
   /* стили для md-устройств */
 
- .start,
+ .start {
+    font-size: 300%;
+ }
  h1,
  h2 {
   font-size: 200%;
 }
 .wd-80 {
   font-size: 150%;
+  border: 3px solid #a78952;
 }
 .wd-90,
 a { 
-  font-size: 200%;
+  font-size: 240%;
+  border: 3px solid #a78952;
 }
 .resault,.PS {
-  font-size: 500%;
+  font-size: 450%;
 }
 }
 @media (min-width: 1200px) {
 .start {
   padding:0.75%;
+  font-size: 400%;
 }
- .start,
  h1,
  h2 {
   font-size: 300%;
+   border: 3px solid #a78952;
 }
 .wd-80 {
-  font-size: 150%;
+  font-size: 160%;
+   border: 3px solid #a78952;
 }
 .wd-90,
 a { 
-  font-size: 220%;
+  font-size: 240%;
+   border: 3px solid #a78952;
 }
 .resault,.PS {
-  font-size: 600%;
+  font-size: 550%;
+   border: 3px solid #a78952;
 }
 
 /* стили для lg-устройств */
