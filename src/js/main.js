@@ -251,9 +251,7 @@ var ArrayOfQestion = [
 // var Memory=0;
 // var f1=0,f2=0,f3=0;
 // console.log(getRndInteger(0,3))
-var CombatIndex=0
-var MagicIndex=0
-var StealthIndex=1
+
 // var ch=12
 var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
   var NewDiv = document.createElement('div');
