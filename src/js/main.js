@@ -1,4 +1,5 @@
 'use strict'
+var children=5
 // var elms = document.getElementsByTagName("*");
 // var n = elms.length;
 // for(var i = 0; i < n; i ++) {
@@ -30,15 +31,16 @@ var Stealth = function () {
   StealthIndex++
 }
 
-var restart = function () {
-  // console.log(arr)
-  arr[N-1].classList.remove('showing')
-  N=1
-  arr[0].classList.add('showing')
-  CombatIndex=0
-  MagicIndex=0
-  StealthIndex=0
-}
+// var restart = function () {
+//   // console.log(arr)
+//   N=1
+//   arr[N-1].classList.remove('showing')
+  
+//   arr[0].classList.add('showing')
+//   CombatIndex=0
+//   MagicIndex=0
+//   StealthIndex=0
+// }
 var resault = function() {
 
   if (CombatIndex>6 && MagicIndex>-1 && MagicIndex<4 && StealthIndex>-1 && StealthIndex<4) {
@@ -244,7 +246,70 @@ var ArrayOfQestion = [
 }
 ]
 
+var ArrayOfQestionEng = [
 
+{
+  Number:"<strong>Question 1</strong> On a clear day you chance upon a strange animal, its leg trapped in a hunter's clawsnare. Judging from the bleeding it will not survive long",
+  Question1:'Draw your dagger, mercifully ending its life with a single thrust',
+  Question2:'Use herbs from your pack to put it to sleep',
+  Question3:'Do not interfere in the natural evolution of events, but rather take the opportunity to learn more about a strange animal you have never seen before'
+},
+
+{
+  Number:'Question 2: One Summer afternoon your father gives you a choice of chores.',
+  Question1:'Work in the forge with him casting iron for a new plow',
+  Question2:'Gather herbs for your mother who is preparing dinner',
+  Question3:'Go catch fish at the stream using a net and line'
+},
+{
+  Number:'Question 3: Your cousin has given you a very embarrassing nickname and, even worse, likes to call you it in front of your friends. You asked him to stop, but he finds it very amusing to watch you blush',
+  Question1:'Beat up your cousin, then tell him that if he ever calls you that nickname again, you will bloody him worse than this time',
+  Question2:'Make up a story that makes your nickname a badge of honor instead of something humiliating',
+  Question3:'Make up an even more embarrassing nickname for him and use it constantly until he learns his lesson'
+},
+{
+  Number:"Question 4: There is a lot of heated discussion at the local tavern over a grouped of people called 'Telepaths'. They have been hired by certain City-State kings. Rumor has it these Telepaths read a person's mind and tell their lord whether a follower is telling the truth or not",
+  Question1:"This is a terrible practice. A person's thoughts are his own and no one, not even a king, has the right to make such an invasion into another human's mind",
+  Question2:'Loyal followers to the king have nothing to fear from a Telepath. It is important to have a method of finding assassins and spies before it is too late',
+  Question3:'In these times, it is a necessary evil. Although you do not necessarily like the idea, a Telepath could have certain advantages during a time of war or in finding someone innocent of a crime'
+},
+{
+  Number:"Question 5: Your mother sends you to the market with a list of goods to buy. After you finish you find that by mistake a shopkeeper has given you too much money back in exchange for one of the items.",
+  Question1:"Return to the store and give the shopkeeper his hard-earned money, explaining to him the mistake",
+  Question2:"Decide to put the extra money to good use and purchase items that would help your family",
+  Question3:"Pocket the extra money, knowing that shopkeepers in general tend to overcharge customers anyway"
+},
+{
+  Number:"Question 6: While in the market place you witness a thief cut a purse from a noble. Even as he does so, the noble notices and calls for the city guards. In his haste to get away, the thief drops the purse near you. Surprisingly no one seems to notice the bag of coins at your feet.",
+  Question1:"Pick up the bag and signal to the guard, knowing that the only honorable thing to do is return the money to its rightful owner",
+  Question2:"Leave the bag there, knowing that it is better not to get involved",
+  Question3:"Pick up the bag and pocket it, knowing that the extra windfall will help your family in times of trouble"
+},
+{
+  Number:"Question 7: Your father sends you on a task which you loathe, cleaning the stables. On the way there, pitchfork in hand, you run into your friend from the homestead near your own. He offers to do it for you, in return for a future favor of his choosing",
+  Question1:"Decline his offer, knowing that your father expects you to do the work, and it is better not to be in debt",
+  Question2:"Ask him to help you, knowing that two people can do the job faster than one, and agree to help him with one task of his choosing in the future",
+  Question3:"Accept his offer, reasoning that as long as the stables are cleaned, it matters not who does the cleaning"
+},
+{
+  Number:"Question 8: Your mother asks you to help fix the stove. While you are working, a very hot pipe slips its mooring and falls towards her",
+  Question1:"Position yourself between the pipe and your mother",
+  Question2:"Grab the hot pipe and try to push it away",
+  Question3:"Push your mother out of the way"
+},
+{
+  Number:"Question 9: While in town the baker gives you a sweetroll. Delighted, you take it into an alley to enjoy only to be intercepted by a gang of three other kids your age. The leader demands the sweetroll, or else he and his friends will beat you and take it",
+  Question1:"Drop the sweetroll and step on it, then get ready for the fight",
+  Question2:"Give him the sweetroll now without argument, knowing that later this afternoon you will have all your friends with you and can come and take whatever he owes you",
+  Question3:"Act like you're going to give him the sweetroll, but at the last minute throw it in the air, hoping that they'll pay attention to it long enough for you to get a shot in on the leader"
+},
+{
+  Number:"Question 10: Entering town you find that you are witness to a very well-dressed man running from a crowd. He screams to you for help. The crowd behind him seem very angry",
+  Question1:"Rush to the town's aid immediately, despite your lack of knowledge of the circumstances",
+  Question2:"Stand aside and allow the man and the mob to pass, realizing it is probably best not to get involved",
+  Question3:"Rush to the man's aid immediately, despite your lack of knowledge of the circumstances"
+}
+]
 
 
 
@@ -273,6 +338,7 @@ var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
      evt.preventDefault();
      arr[N-1].classList.remove('showing')
      arr[N].classList.add('showing')
+     // console.log('N= ' + N)
      N++
      if (SummaPlus === 'MagicIndex') {Magic()} else {
        if (SummaPlus === 'CombatIndex') {Combat()} else {
@@ -334,14 +400,14 @@ if (RandomAnswer1===1) {
 // Create(Answer3,'StealthIndex')
 
 
-body.insertBefore(NewDiv,body.children[4]);
+body.insertBefore(NewDiv,body.children[children]);
 
 }
 
 
 
 var arr = document.getElementsByTagName('div')
-var N=1
+var N=2
 
 var links = document.getElementsByTagName('a');
 for (var i = 0; i < links.length; i++) {
@@ -361,12 +427,109 @@ for (var i = 0; i < links.length; i++) {
 document.addEventListener("DOMContentLoaded", function () {
   // document.querySelector('.red').classList.remove('red')
   // 
-  for( var Index=9; Index>-1; Index--) {
-    CreateQuestion(ArrayOfQestion[Index].Number,ArrayOfQestion[Index].Question1,ArrayOfQestion[Index].Question2,ArrayOfQestion[Index].Question3)
-  }
+
   
 
 });
+
+
+
+
+document.querySelector('.russian-button').addEventListener('click',function(){
+
+  var NewDiv = document.createElement('div');
+  NewDiv.style.backgroundImage="background-image:url('img/background-image.jpg')";
+  NewDiv.classList="hidden russian-slide"
+  var H1 =document.createElement('h1') 
+  H1.classList="visually-hidden"
+   H1.textContent="Morrowind"
+  NewDiv.appendChild(H1);
+  var SPAN = document.createElement('span')
+  SPAN.classList="title__img"
+  NewDiv.appendChild(SPAN);
+  var H2 = document.createElement('h2')
+  H2.textContent="Опросник класса"
+  NewDiv.appendChild(H2);
+  var newP = document.createElement('p')
+  newP.classList="wd-80"
+  newP.textContent="Один из способов выбрать класс персонажа при старте новой игры заключается в ответе на опрос, который проводит Сокуциус Эргала. Вам будет предложено десять вопросов с тремя вариантами ответа на каждый из них. В зависимости от выбранных вариантов, вам будет предложен класс, который наилучшим образом соответствует вашим ответам. Вы всегда можете игнорировать его предложение и выбрать другой предопределенный класс, или создать свой собственный."
+  NewDiv.appendChild(newP);
+  var NewLink = document.createElement('a')
+  NewLink.classList="start-russian"
+  NewLink.href="#"
+
+  NewLink.textContent="Начать"
+  NewDiv.appendChild(NewLink);
+  body.insertBefore(NewDiv,body.children[children+1]);
+
+  
+  document.querySelector('.first-slide').classList.remove('showing')
+ document.querySelector('.russian-slide').classList.add('showing')
+
+ document.querySelector('.last').classList.remove('showing')
+    document.querySelector('.start-russian').addEventListener('click',function(evt){
+   document.querySelector('.russian-slide').classList.remove('showing')
+  evt.preventDefault();
+    // document.querySelector('.first-slide').classList.remove('showing')
+ 
+  for( var Index=9; Index>-1; Index--) {
+    CreateQuestion(ArrayOfQestion[Index].Number,ArrayOfQestion[Index].Question1,ArrayOfQestion[Index].Question2,ArrayOfQestion[Index].Question3)
+  }
+ arr[2].classList.add('showing')
+ // console.log('N= ' + N)
+})
+
+})
+
+document.querySelector('.english-button').addEventListener('click',function(){
+ var NewDiv = document.createElement('div');
+  NewDiv.style.backgroundImage="background-image:url('img/background-image.jpg')";
+  NewDiv.classList="hidden english-slide"
+  var H1 =document.createElement('h1') 
+  H1.classList="visually-hidden"
+  NewDiv.appendChild(H1);
+  var SPAN = document.createElement('span')
+  SPAN.classList="title__img"
+  NewDiv.appendChild(SPAN);
+  var H2 = document.createElement('h2')
+  H2.textContent="Class Quiz"
+  NewDiv.appendChild(H2);
+  var newP = document.createElement('p')
+  newP.classList="wd-80"
+  newP.textContent="One of the ways to choose your character's class at the start of the game is to allow Socucius Ergalla to give you a 'personality test' of sorts. You will be asked ten multiple-choice questions, and he will suggest the class that best fits your answers. You can always ignore his suggestion and choose a different predefined class, or create your own"
+  NewDiv.appendChild(newP);
+  var NewLink = document.createElement('a')
+  NewLink.classList="start-english"
+
+  NewLink.textContent="Start"
+  NewDiv.appendChild(NewLink);
+  body.insertBefore(NewDiv,body.children[5]);
+
+ // document.querySelector('.english-slide').classList.add('showing')
+ // document.querySelector('.first-slide').classList.remove('showing')
+  // arr[N-1].classList.remove('showing')
+  //   arr[N].classList.add('showing')
+  //   N++
+    document.querySelector('.start-russian').addEventListener('click',function(){
+   document.querySelector('.russian-slide').classList.remove('showing')
+  // arr[N-1].classList.remove('showing')
+  //   arr[N].classList.add('showing')
+  //   N++
+  for( var Index=9; Index>-1; Index--) {
+    CreateQuestion(ArrayOfQestionEng[Index].Number,ArrayOfQestionEng[Index].Question1,ArrayOfQestionEng[Index].Question2,ArrayOfQestionEng[Index].Question3)
+  }
+})
+
+
+})
+
+
+
+
+// document.querySelector('.start-english').addEventListener('click',function(){
+//    document.querySelector('.english-slide').classList.remove('showing')
+
+// })
 // test()
 // 
 // 
@@ -377,7 +540,7 @@ var Interval = 8500; //time for change pictures
 var slideInterval = setInterval(nextSlide,Interval);
 // default time = 8500
 function nextSlide() {
-    slides[currentSlide].className = slides[currentSlide].className.replace(' showing-slide','');
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className += ' showing-slide'; 
+  slides[currentSlide].className = slides[currentSlide].className.replace(' showing-slide','');
+  currentSlide = (currentSlide+1)%slides.length;
+  slides[currentSlide].className += ' showing-slide'; 
 }
