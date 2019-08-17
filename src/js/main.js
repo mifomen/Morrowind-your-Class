@@ -1,7 +1,7 @@
 'use strict'
 // var child=4
-// var 1
-var child=4
+// var 1 for production
+var child=1
 var Language=true
 // var elms = document.getElementsByTagName("*");
 // var n = elms.length;
@@ -342,18 +342,18 @@ var ArrayOfQestionEng = [
 // var Memory=0;
 // var f1=0,f2=0,f3=0;
 // console.log(getRndInteger(0,3))
-  var translate = function(rusWord) {
-    return className[rusWord];
-  }
+var translate = function(rusWord) {
+  return className[rusWord];
+}
   // console.log(translate('Паладин',className))
   var tran = function() { 
-      if (Language) {
-        document.querySelector('.combat').textContent = translate(document.querySelector('.combat').textContent,className)
+    if (Language) {
+      document.querySelector('.combat').textContent = translate(document.querySelector('.combat').textContent,className)
 
-          document.querySelector('.resault').textContent='AMAZING YOU ARE';
-          document.querySelector('.PS').textContent='PRESS TAB ON SCREEN FOR RESTART';
-      }
-}
+      document.querySelector('.resault').textContent='AMAZING YOU ARE';
+      document.querySelector('.PS').textContent='PRESS TAB ON SCREEN FOR RESTART';
+    }
+  }
 
 // var ch=12
 var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
@@ -387,7 +387,7 @@ var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
       } } 
     if  (CombatIndex + MagicIndex + StealthIndex === 10) {
       resault();
-tran();
+      tran();
 
     }
   }
@@ -452,8 +452,9 @@ body.insertBefore(NewDiv,body.children[child+1]);
 
 
 var arr = document.getElementsByTagName('div')
-var N=3
-//var = 3 producti
+var N=2
+//var = 3 test
+// var = 2 producti
 // var links = document.getElementsByTagName('a');
 // for (var i = 0; i < links.length; i++) {
 //   links[i].addEventListener('click',function (evt) {
@@ -472,8 +473,8 @@ var N=3
 
 
 
-document.querySelector('.russian-button').addEventListener('click',function(){
-
+document.querySelector('.russian-button').addEventListener('click',function(evt){
+  evt.preventDefault();
   Language=false
   // console.log('Language= ' + Language)
   for( var Index=9; Index>-1; Index--) {
@@ -528,9 +529,9 @@ document.querySelector('.russian-button').addEventListener('click',function(){
     var arr = document.getElementsByTagName('div')
 
     arr[N-1].classList.remove('showing')
-    console.log('N= '+ N)
+    // console.log('N= '+ N)
     arr[N].classList.add('showing')
-    console.log('N= '+ N)
+    // console.log('N= '+ N)
     //    arr[child].classList.remove('showing')
     // arr[child+1].classList.add('showing')
   }
@@ -540,11 +541,12 @@ document.querySelector('.russian-button').addEventListener('click',function(){
   document.querySelector('.russian-slide').classList.add('showing')
   document.querySelector('.last').classList.remove('showing')
 })
-document.querySelector('.english-button').addEventListener('click',function(){
+document.querySelector('.english-button').addEventListener('click',function(evt){
     // console.log('N= ' + N)
-  Language=true
+    evt.preventDefault();
+    Language=true
   // console.log('Language= ' + Language)
-    for( var Index=9; Index>-1; Index--) {
+  for( var Index=9; Index>-1; Index--) {
     CreateQuestion(ArrayOfQestionEng[Index].Number,ArrayOfQestionEng[Index].Question1,ArrayOfQestionEng[Index].Question2,ArrayOfQestionEng[Index].Question3)
   }
   var links = document.getElementsByTagName('a');
@@ -586,7 +588,7 @@ document.querySelector('.english-button').addEventListener('click',function(){
    evt.preventDefault();
 
    document.querySelector('.english-slide').classList.remove('showing')
-   evt.preventDefault();
+
      // console.log('N= ' + N)
     // document.querySelector('.first-slide').classList.remove('showing')
     
@@ -595,8 +597,9 @@ document.querySelector('.english-button').addEventListener('click',function(){
     // N++
 
     var arr = document.getElementsByTagName('div')
-    arr[2].classList.remove('showing')
-    arr[3].classList.add('showing')
+    arr[N-1].classList.remove('showing')
+    // console.log('N= '+ N)
+    arr[N].classList.add('showing')
   }
   NewDiv.appendChild(NewLink);
   body.insertBefore(NewDiv,body.children[child+1]);
@@ -646,9 +649,9 @@ document.addEventListener("DOMContentLoaded", function () {
   span.classList='PS'
   span.innerHTML='Tab по экрану <br>и начнешь заново'
   NewDiv.appendChild(span);
-  body.insertBefore(NewDiv,body.children[child]);
-
-  document.querySelector('.last').addEventListener('click',function(){
-    window.location.reload()
-  })
+  body.insertBefore(NewDiv,body.children[child+1]);
+//  body.insertBefore(NewDiv,body.children[child]); test
+document.querySelector('.last').addEventListener('click',function(){
+  window.location.reload()
+})
 });
