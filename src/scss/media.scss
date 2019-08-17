@@ -154,17 +154,22 @@ a {
  h2 {
   font-size: 200%;
 }
+.first-slide a {
+  font-size: 250%;
+}
 .wd-80 {
-  font-size: 130%;
+  font-size: 120%;
   border: 3px solid #a78952;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 .wd-90,
 a { 
-  font-size: 220%;
+  font-size: 175%;
   border: 3px solid #a78952;
 }
 .resault,.PS {
-  font-size: 450%;
+  font-size: 200%;
 }
 }
 @media (min-width: 1200px) {

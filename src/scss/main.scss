@@ -173,6 +173,7 @@ background-color: rgba(4,3,3,0.8);
 align-items: center;
 // justify-content: space-between;
 }
+
 a {
   font-weight: bold;
   color: #cbb791;
@@ -319,4 +320,12 @@ background-position: 50% 50%;
 }
 .row {
   margin:0;
+}
+
+.wd-90 {
+  padding:0;
+}
+.wd-90 a {
+    margin-top: 5%;
+  margin-bottom: 5%;
 }
