@@ -1,5 +1,8 @@
 'use strict'
+// var child=4
+// var 1
 var child=4
+var Language=true
 // var elms = document.getElementsByTagName("*");
 // var n = elms.length;
 // for(var i = 0; i < n; i ++) {
@@ -7,9 +10,7 @@ var child=4
 //         elms[i].style.cursor = "url(img/cursor.ico)";
 //     }
 // }
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector('.red').classList.remove('red')
-});
+
 
 
 var test = function () {
@@ -41,6 +42,31 @@ var Stealth = function () {
 //   MagicIndex=0
 //   StealthIndex=0
 // }
+// 
+var className = {
+  'Воин':'Warrior',
+  'Маг':'Mage',
+  'Вор':'Thief',
+  'Рыцарь':'Рыцарь',
+  'Варвар':'Barbarian',
+  'Паладин':'Crusader',
+  'Разведчик':'Scout',
+  'Лучник':'Archer',
+  'Жулик':'Rogue',
+  'Целитель':'Healer',
+  'Бард':'Bard',
+  'Пилигрим':'Pilgrim',
+  'Шпион':'Agent',
+  'Чародей':'Sorcerer',
+  'Монах':'Monk',
+  'Акробат':'Acrobat',
+  'Воин Слова':'Spellsword',
+  'Ассассин':'Assassin',
+  'Боевой маг':'Battlemage',
+  'Инквизитор':'Witchhunter',
+  'Меч ночи':'Nightblade'
+};
+
 var resault = function() {
 
   if (CombatIndex>6 && MagicIndex>-1 && MagicIndex<4 && StealthIndex>-1 && StealthIndex<4) {
@@ -316,6 +342,18 @@ var ArrayOfQestionEng = [
 // var Memory=0;
 // var f1=0,f2=0,f3=0;
 // console.log(getRndInteger(0,3))
+  var translate = function(rusWord) {
+    return className[rusWord];
+  }
+  // console.log(translate('Паладин',className))
+  var tran = function() { 
+      if (Language) {
+        document.querySelector('.combat').textContent = translate(document.querySelector('.combat').textContent,className)
+
+          document.querySelector('.resault').textContent='AMAZING YOU ARE';
+          document.querySelector('.PS').textContent='PRESS TAB ON SCREEN FOR RESTART';
+      }
+}
 
 // var ch=12
 var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
@@ -329,6 +367,8 @@ var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
   NewP.classList="wd-90"
   NewDiv.appendChild(NewP);
   NewP.innerHTML=Text
+
+
 
   var Create = function (AnswerOne,SummaPlus) {
    var NewLink = document.createElement('a')
@@ -347,6 +387,8 @@ var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
       } } 
     if  (CombatIndex + MagicIndex + StealthIndex === 10) {
       resault();
+tran();
+
     }
   }
   NewDiv.appendChild(NewLink);
@@ -411,16 +453,17 @@ body.insertBefore(NewDiv,body.children[child+1]);
 
 var arr = document.getElementsByTagName('div')
 var N=3
-var links = document.getElementsByTagName('a');
-for (var i = 0; i < links.length; i++) {
-  links[i].addEventListener('click',function (evt) {
-    evt.preventDefault();
-    arr[N-1].classList.remove('showing')
-    arr[N].classList.add('showing')
-    N++
-    document.querySelector('.combat').textContent = CombatIndex;
-  })
-}
+//var = 3 producti
+// var links = document.getElementsByTagName('a');
+// for (var i = 0; i < links.length; i++) {
+//   links[i].addEventListener('click',function (evt) {
+//     evt.preventDefault();
+//     arr[N-1].classList.remove('showing')
+//     arr[N].classList.add('showing')
+//     N++
+//     document.querySelector('.combat').textContent = CombatIndex;
+//   })
+// }
 
 // document.addEventListener("DOMContentLoaded", function () {
 
@@ -430,12 +473,27 @@ for (var i = 0; i < links.length; i++) {
 
 
 document.querySelector('.russian-button').addEventListener('click',function(){
-  // console.log('N= ' + N)
 
-   for( var Index=9; Index>-1; Index--) {
-      CreateQuestion(ArrayOfQestion[Index].Number,ArrayOfQestion[Index].Question1,ArrayOfQestion[Index].Question2,ArrayOfQestion[Index].Question3)
-    }
-  var arr = document.getElementsByTagName('div')
+  Language=false
+  // console.log('Language= ' + Language)
+  for( var Index=9; Index>-1; Index--) {
+    CreateQuestion(ArrayOfQestion[Index].Number,ArrayOfQestion[Index].Question1,ArrayOfQestion[Index].Question2,ArrayOfQestion[Index].Question3)
+  }
+  /* amazing last slide*/
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click',function (evt) {
+      evt.preventDefault();
+      arr[N-1].classList.remove('showing')
+      // console.log('N= '+ N)
+      arr[N].classList.add('showing')
+      // N++
+      // console.log('N= '+ N)
+      // document.querySelector('.combat').textContent = CombatIndex;
+    })
+  }
+
+  // var arr = document.getElementsByTagName('div')
   var NewDiv = document.createElement('div');
   NewDiv.style.backgroundImage="background-image:url('img/background-image.jpg')";
   NewDiv.classList="hidden russian-slide"
@@ -456,24 +514,25 @@ document.querySelector('.russian-button').addEventListener('click',function(){
   var NewLink = document.createElement('a')
   NewLink.classList="start-russian"
   NewLink.href="#"
-
   NewLink.textContent="Начать"
-
-     NewLink.onclick = function (evt) {
-     evt.preventDefault();
-
-   document.querySelector('.russian-slide').classList.remove('showing')
+  NewLink.onclick = function (evt) {
    evt.preventDefault();
+   document.querySelector('.russian-slide').classList.remove('showing')
      // console.log('N= ' + N)
     // document.querySelector('.first-slide').classList.remove('showing')
     
     //  arr[N-1].classList.remove('showing')
     // arr[N].classList.add('showing')
     // N++
-   
+
     var arr = document.getElementsByTagName('div')
-    arr[2].classList.remove('showing')
-    arr[3].classList.add('showing')
+
+    arr[N-1].classList.remove('showing')
+    console.log('N= '+ N)
+    arr[N].classList.add('showing')
+    console.log('N= '+ N)
+    //    arr[child].classList.remove('showing')
+    // arr[child+1].classList.add('showing')
   }
   NewDiv.appendChild(NewLink);
   body.insertBefore(NewDiv,body.children[child+1]);
@@ -482,11 +541,23 @@ document.querySelector('.russian-button').addEventListener('click',function(){
   document.querySelector('.last').classList.remove('showing')
 })
 document.querySelector('.english-button').addEventListener('click',function(){
-  console.log('N= ' + N)
+    // console.log('N= ' + N)
+  Language=true
+  // console.log('Language= ' + Language)
+    for( var Index=9; Index>-1; Index--) {
+    CreateQuestion(ArrayOfQestionEng[Index].Number,ArrayOfQestionEng[Index].Question1,ArrayOfQestionEng[Index].Question2,ArrayOfQestionEng[Index].Question3)
+  }
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click',function (evt) {
+      evt.preventDefault();
+      arr[N-1].classList.remove('showing')
+      arr[N].classList.add('showing')
+      // N++
+      // document.querySelector('.combat').textContent = CombatIndex;
+    })
+  }
 
-   for( var Index=9; Index>-1; Index--) {
-      CreateQuestion(ArrayOfQestionEng[Index].Number,ArrayOfQestionEng[Index].Question1,ArrayOfQestionEng[Index].Question2,ArrayOfQestionEng[Index].Question3)
-    }
   var arr = document.getElementsByTagName('div')
   var NewDiv = document.createElement('div');
   NewDiv.style.backgroundImage="background-image:url('img/background-image.jpg')";
@@ -511,8 +582,8 @@ document.querySelector('.english-button').addEventListener('click',function(){
 
   NewLink.textContent="Start"
 
-     NewLink.onclick = function (evt) {
-     evt.preventDefault();
+  NewLink.onclick = function (evt) {
+   evt.preventDefault();
 
    document.querySelector('.english-slide').classList.remove('showing')
    evt.preventDefault();
@@ -522,7 +593,7 @@ document.querySelector('.english-button').addEventListener('click',function(){
     //  arr[N-1].classList.remove('showing')
     // arr[N].classList.add('showing')
     // N++
-   
+
     var arr = document.getElementsByTagName('div')
     arr[2].classList.remove('showing')
     arr[3].classList.add('showing')
@@ -555,3 +626,29 @@ function nextSlide() {
   currentSlide = (currentSlide+1)%slides.length;
   slides[currentSlide].className += ' showing-slide'; 
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // document.querySelector('.red').classList.remove('red')
+  var NewDiv = document.createElement('div');
+  NewDiv.style.backgroundImage="background-image:url('img/slide/slide3.jpg')";
+  NewDiv.classList="last hidden center"
+  // NewDiv.onclick= function() {}
+
+  var span =document.createElement('span') 
+  span.classList='resault'
+  span.textContent='ВЕЛИКОЛЕПНО ВЫ'
+  NewDiv.appendChild(span);
+  var span =document.createElement('span') 
+  span.classList='combat resault red'
+  span.textContent='что-то пошло не так, напиши Mifomen'
+  NewDiv.appendChild(span);
+  var span =document.createElement('span') 
+  span.classList='PS'
+  span.innerHTML='Tab по экрану <br>и начнешь заново'
+  NewDiv.appendChild(span);
+  body.insertBefore(NewDiv,body.children[child]);
+
+  document.querySelector('.last').addEventListener('click',function(){
+    window.location.reload()
+  })
+});
