@@ -74,7 +74,7 @@ div > a {
   text-shadow: 3px 3px 15px black;
   // transition: 300ms ease;
   color: #c39f5d;
-  border: 7px solid #a78952;
+  border: 3px solid #a78952;
   background-color: rgba(4,3,3,0.8);
 }
 .start:focus,
@@ -133,7 +133,7 @@ div > a {
 h1,h2 {
   padding: 1% 3%;
   color: #cbb791;
-  border: 7px solid #a78952;
+  border: 3px solid #a78952;
   background-color: rgba(4,3,3,0.8);
 
 }
@@ -147,7 +147,7 @@ h2 {
 .wd-80 {
 
   width: 90%;
-  border: 7px solid #a78952;
+  border: 3px solid #a78952;
   color: #cbb791;
 // border-radius: 25px;
 padding: 1%;
@@ -162,7 +162,7 @@ background-color: rgba(4,3,3,0.8);
 
 .wd-90 {
   width: 90%;
-  border: 7px solid #a78952;
+  border: 3px solid #a78952;
   color: #cbb791;
   padding: 1%;
   font-size: 120%;
@@ -179,7 +179,7 @@ a {
   text-decoration: none;
   background-color: rgba(4,3,3,0.8);
   font-size: 120%;
-  border: 7px solid #a78952;
+  border: 3px solid #a78952;
   color: #cbb791;
   padding: 1%;
   font-size: 120%;
@@ -227,7 +227,7 @@ a:focus {
   text-shadow: 3px 3px 15px black;
   // transition: 300ms ease;
   color: #c39f5d;
-  border: 7px solid #a78952;
+  border: 3px solid #a78952;
   background-color: rgba(4,3,3,0.8);
   padding-top: 0.5%;
   padding-bottom: 0.5%;
@@ -316,4 +316,7 @@ background-position: 50% 50%;
 }
 .first-slide a {
   margin: 5%;
+}
+.row {
+  margin:0;
 }

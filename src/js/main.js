@@ -1,5 +1,5 @@
 'use strict'
-var children=5
+var child=4
 // var elms = document.getElementsByTagName("*");
 // var n = elms.length;
 // for(var i = 0; i < n; i ++) {
@@ -35,7 +35,7 @@ var Stealth = function () {
 //   // console.log(arr)
 //   N=1
 //   arr[N-1].classList.remove('showing')
-  
+
 //   arr[0].classList.add('showing')
 //   CombatIndex=0
 //   MagicIndex=0
@@ -339,6 +339,7 @@ var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
      arr[N-1].classList.remove('showing')
      arr[N].classList.add('showing')
      // console.log('N= ' + N)
+     // test()
      N++
      if (SummaPlus === 'MagicIndex') {Magic()} else {
        if (SummaPlus === 'CombatIndex') {Combat()} else {
@@ -400,49 +401,47 @@ if (RandomAnswer1===1) {
 // Create(Answer3,'StealthIndex')
 
 
-body.insertBefore(NewDiv,body.children[children]);
+body.insertBefore(NewDiv,body.children[child+1]);
 
 }
 
 
 
-var arr = document.getElementsByTagName('div')
-var N=2
 
+
+var arr = document.getElementsByTagName('div')
+var N=3
 var links = document.getElementsByTagName('a');
 for (var i = 0; i < links.length; i++) {
   links[i].addEventListener('click',function (evt) {
     evt.preventDefault();
-
     arr[N-1].classList.remove('showing')
     arr[N].classList.add('showing')
     N++
-
     document.querySelector('.combat').textContent = CombatIndex;
-
-
   })
-};
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-  // document.querySelector('.red').classList.remove('red')
-  // 
+// document.addEventListener("DOMContentLoaded", function () {
 
-  
-
-});
+// });
 
 
 
 
 document.querySelector('.russian-button').addEventListener('click',function(){
+  // console.log('N= ' + N)
 
+   for( var Index=9; Index>-1; Index--) {
+      CreateQuestion(ArrayOfQestion[Index].Number,ArrayOfQestion[Index].Question1,ArrayOfQestion[Index].Question2,ArrayOfQestion[Index].Question3)
+    }
+  var arr = document.getElementsByTagName('div')
   var NewDiv = document.createElement('div');
   NewDiv.style.backgroundImage="background-image:url('img/background-image.jpg')";
   NewDiv.classList="hidden russian-slide"
   var H1 =document.createElement('h1') 
   H1.classList="visually-hidden"
-   H1.textContent="Morrowind"
+  H1.textContent="Morrowind"
   NewDiv.appendChild(H1);
   var SPAN = document.createElement('span')
   SPAN.classList="title__img"
@@ -459,34 +458,42 @@ document.querySelector('.russian-button').addEventListener('click',function(){
   NewLink.href="#"
 
   NewLink.textContent="Начать"
-  NewDiv.appendChild(NewLink);
-  body.insertBefore(NewDiv,body.children[children+1]);
 
-  
-  document.querySelector('.first-slide').classList.remove('showing')
- document.querySelector('.russian-slide').classList.add('showing')
+     NewLink.onclick = function (evt) {
+     evt.preventDefault();
 
- document.querySelector('.last').classList.remove('showing')
-    document.querySelector('.start-russian').addEventListener('click',function(evt){
    document.querySelector('.russian-slide').classList.remove('showing')
-  evt.preventDefault();
+   evt.preventDefault();
+     // console.log('N= ' + N)
     // document.querySelector('.first-slide').classList.remove('showing')
- 
-  for( var Index=9; Index>-1; Index--) {
-    CreateQuestion(ArrayOfQestion[Index].Number,ArrayOfQestion[Index].Question1,ArrayOfQestion[Index].Question2,ArrayOfQestion[Index].Question3)
+    
+    //  arr[N-1].classList.remove('showing')
+    // arr[N].classList.add('showing')
+    // N++
+   
+    var arr = document.getElementsByTagName('div')
+    arr[2].classList.remove('showing')
+    arr[3].classList.add('showing')
   }
- arr[2].classList.add('showing')
- // console.log('N= ' + N)
+  NewDiv.appendChild(NewLink);
+  body.insertBefore(NewDiv,body.children[child+1]);
+  document.querySelector('.first-slide').classList.remove('showing')
+  document.querySelector('.russian-slide').classList.add('showing')
+  document.querySelector('.last').classList.remove('showing')
 })
-
-})
-
 document.querySelector('.english-button').addEventListener('click',function(){
- var NewDiv = document.createElement('div');
+  console.log('N= ' + N)
+
+   for( var Index=9; Index>-1; Index--) {
+      CreateQuestion(ArrayOfQestionEng[Index].Number,ArrayOfQestionEng[Index].Question1,ArrayOfQestionEng[Index].Question2,ArrayOfQestionEng[Index].Question3)
+    }
+  var arr = document.getElementsByTagName('div')
+  var NewDiv = document.createElement('div');
   NewDiv.style.backgroundImage="background-image:url('img/background-image.jpg')";
   NewDiv.classList="hidden english-slide"
   var H1 =document.createElement('h1') 
   H1.classList="visually-hidden"
+  H1.textContent="Morrowind"
   NewDiv.appendChild(H1);
   var SPAN = document.createElement('span')
   SPAN.classList="title__img"
@@ -500,27 +507,31 @@ document.querySelector('.english-button').addEventListener('click',function(){
   NewDiv.appendChild(newP);
   var NewLink = document.createElement('a')
   NewLink.classList="start-english"
+  NewLink.href="#"
 
   NewLink.textContent="Start"
-  NewDiv.appendChild(NewLink);
-  body.insertBefore(NewDiv,body.children[5]);
 
- // document.querySelector('.english-slide').classList.add('showing')
- // document.querySelector('.first-slide').classList.remove('showing')
-  // arr[N-1].classList.remove('showing')
-  //   arr[N].classList.add('showing')
-  //   N++
-    document.querySelector('.start-russian').addEventListener('click',function(){
-   document.querySelector('.russian-slide').classList.remove('showing')
-  // arr[N-1].classList.remove('showing')
-  //   arr[N].classList.add('showing')
-  //   N++
-  for( var Index=9; Index>-1; Index--) {
-    CreateQuestion(ArrayOfQestionEng[Index].Number,ArrayOfQestionEng[Index].Question1,ArrayOfQestionEng[Index].Question2,ArrayOfQestionEng[Index].Question3)
+     NewLink.onclick = function (evt) {
+     evt.preventDefault();
+
+   document.querySelector('.english-slide').classList.remove('showing')
+   evt.preventDefault();
+     // console.log('N= ' + N)
+    // document.querySelector('.first-slide').classList.remove('showing')
+    
+    //  arr[N-1].classList.remove('showing')
+    // arr[N].classList.add('showing')
+    // N++
+   
+    var arr = document.getElementsByTagName('div')
+    arr[2].classList.remove('showing')
+    arr[3].classList.add('showing')
   }
-})
-
-
+  NewDiv.appendChild(NewLink);
+  body.insertBefore(NewDiv,body.children[child+1]);
+  document.querySelector('.first-slide').classList.remove('showing')
+  document.querySelector('.english-slide').classList.add('showing')
+  document.querySelector('.last').classList.remove('showing')
 })
 
 
