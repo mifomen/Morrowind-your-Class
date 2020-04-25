@@ -1,7 +1,7 @@
 'use strict'
 // var child=4
-// var 1 for production
-var child=1
+// var 1 for production - coz problem with browser sync
+var child=4
 var Language=true
 // var elms = document.getElementsByTagName("*");
 // var n = elms.length;
