@@ -47,7 +47,7 @@ var className = {
   'Воин':'Warrior',
   'Маг':'Mage',
   'Вор':'Thief',
-  'Рыцарь':'Рыцарь',
+  'Рыцарь':'Knight',
   'Варвар':'Barbarian',
   'Паладин':'Crusader',
   'Разведчик':'Scout',
@@ -66,6 +66,9 @@ var className = {
   'Инквизитор':'Witchhunter',
   'Меч ночи':'Nightblade'
 };
+
+
+
 
 var resault = function() {
 
@@ -386,7 +389,7 @@ var CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
         if (SummaPlus === 'StealthIndex') {Stealth()}
       } } 
     if  (CombatIndex + MagicIndex + StealthIndex === 10) {
-      resault();
+      resault(CombatIndex,MagicIndex,StealthIndex);
       tran();
 
     }
@@ -582,7 +585,7 @@ document.querySelector('.english-button').addEventListener('click',function(evt)
   newP.classList="wd-80"
   newP.textContent="One of the ways to choose your character's class at the start of the game is to allow Socucius Ergalla to give you a 'personality test' of sorts. You will be asked ten multiple-choice questions, and he will suggest the class that best fits your answers. You can always ignore his suggestion and choose a different predefined class, or create your own"
   NewDiv.appendChild(newP);
-    var newP = document.createElement('p')
+  var newP = document.createElement('p')
   newP.classList="wd-80"
   newP.textContent="Each question has three possible answers, and each answer indicates a preference for one of the specialties: Stealth, Combat, or Magic. Ten questions with three choices each means there are sixty-six unique combinations. There are only twenty-one different classes, so some classes correspond to more than one combination. In particular, the Thief, Warrior, or Mage will be suggested for any combination with at least seven matching answers of Stealth, Combat, or Magic, respectively"
   NewDiv.appendChild(newP);
@@ -663,3 +666,4 @@ document.querySelector('.last').addEventListener('click',function(){
   window.location.reload()
 })
 });
+
