@@ -1,0 +1,25 @@
+const className = {
+  'Воин':'Warrior',
+  'Маг':'Mage',
+  'Вор':'Thief',
+  'Рыцарь':'Knight',
+  'Варвар':'Barbarian',
+  'Паладин':'Crusader',
+  'Разведчик':'Scout',
+  'Лучник':'Archer',
+  'Жулик':'Rogue',
+  'Целитель':'Healer',
+  'Бард':'Bard',
+  'Пилигрим':'Pilgrim',
+  'Шпион':'Agent',
+  'Чародей':'Sorcerer',
+  'Монах':'Monk',
+  'Акробат':'Acrobat',
+  'Воин Слова':'Spellsword',
+  'Ассассин':'Assassin',
+  'Боевой маг':'Battlemage',
+  'Инквизитор':'Witchhunter',
+  'Меч ночи':'Nightblade',
+};
+
+export {className};
