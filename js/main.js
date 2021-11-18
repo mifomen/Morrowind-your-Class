@@ -4,7 +4,25 @@ import {resault,getRndInteger} from './utils.js';
 
 const body = document.body;
 const child=4;
+const arr = document.getElementsByTagName('div');
+let N=2;
 let Language=true;
+
+// slider on js
+const slides = document.querySelectorAll('#slides .slide');
+let currentSlide = 0;
+const Interval = 1500; //time for change pictures
+const nextSlide = () => {
+  slides[currentSlide].className = slides[currentSlide].className.replace(' showing-slide','');
+  currentSlide = (currentSlide+1)%slides.length;
+  slides[currentSlide].className += ' showing-slide';
+};
+
+const initSliderStart = () => {
+  const startSlider = setInterval(nextSlide,Interval); //eslint-disable-line
+};
+// default time = 18500
+
 
 const test = function () { //eslint-disable-line
   return console.log('C=' + CombatIndex + ' M=' + MagicIndex + ' S=' + StealthIndex) //eslint-disable-line
@@ -52,10 +70,18 @@ const CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
       arr[N-1].classList.remove('showing');
       arr[N].classList.add('showing');
       N++;
-      if (SummaPlus === 'MagicIndex') {Magic();} else {
-        if (SummaPlus === 'CombatIndex') {Combat();} else {
-          if (SummaPlus === 'StealthIndex') {Stealth();}
-        } }
+      switch (true) {
+        case SummaPlus === 'MagicIndex':
+          Magic();
+          break;
+        case SummaPlus === 'CombatIndex':
+          Combat();
+          break;
+        case SummaPlus === 'StealthIndex':
+          Stealth();
+          break;
+      }
+
       if  (CombatIndex + MagicIndex + StealthIndex === 10) {
         console.log(`CombatIndex + MagicIndex + StealthIndex ${CombatIndex} ${MagicIndex} ${StealthIndex})`);//eslint-disable-line
         resault(CombatIndex,MagicIndex,StealthIndex);
@@ -65,7 +91,7 @@ const CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
     NewDiv.appendChild(newLink);
   };
 
-  let RandomAnswer1 = getRndInteger(0,3);
+  const RandomAnswer1 = getRndInteger(0,3);
   let RandomAnswer2 = getRndInteger(0,2);
   if (RandomAnswer1===0) {
     Create(Answer1,'CombatIndex');
@@ -107,11 +133,8 @@ const CreateQuestion = function (Text,Answer1,Answer2,Answer3) {
   body.insertBefore(NewDiv,body.children[child+1]);
 };
 
-
-let arr = document.getElementsByTagName('div');
-let N=2;
-
 document.querySelector('.russian-button').addEventListener('click', (evt) => {
+  initSliderStart();
   evt.preventDefault();
   Language=false;
   for( let Index=9; Index>-1; Index--) {
@@ -119,8 +142,8 @@ document.querySelector('.russian-button').addEventListener('click', (evt) => {
   }
   const links = document.getElementsByTagName('a');
   for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', (evt) => {
-      evt.preventDefault();
+    links[i].addEventListener('click', (evet) => {
+      evet.preventDefault();
       arr[N-1].classList.remove('showing');
       arr[N].classList.add('showing');
     });
@@ -153,10 +176,10 @@ document.querySelector('.russian-button').addEventListener('click', (evt) => {
   newLink.classList='start-russian';
   newLink.href='#';
   newLink.textContent='Начать';
-  newLink.onclick = function (evt) {
-    evt.preventDefault();
+  newLink.onclick = function (evet) {
+    evet.preventDefault();
     document.querySelector('.russian-slide').classList.remove('showing');
-    let arr = document.getElementsByTagName('div');
+    // let arr = document.getElementsByTagName('div');
     arr[N-1].classList.remove('showing');
     arr[N].classList.add('showing');
   };
@@ -167,22 +190,24 @@ document.querySelector('.russian-button').addEventListener('click', (evt) => {
   document.querySelector('.last').classList.remove('showing');
 });
 
-document.querySelector('.english-button').addEventListener('click',(evt) => {
+const startGameOnEngLng = document.querySelector('.english-button');
+initSliderStart();
+startGameOnEngLng.addEventListener('click',(evt) => {
   evt.preventDefault();
   Language = true;
   for( let Index=9; Index>-1; Index--) {
     CreateQuestion(arrayQuestionsEngLng[Index].Number,arrayQuestionsEngLng[Index].Question1,arrayQuestionsEngLng[Index].Question2,arrayQuestionsEngLng[Index].Question3);
   }
-  let links = document.getElementsByTagName('a');
+  const links = document.getElementsByTagName('a');
   for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', (evt) => {
-      evt.preventDefault();
+    links[i].addEventListener('click', (evet) => {
+      evet.preventDefault();
       arr[N-1].classList.remove('showing');
       arr[N].classList.add('showing');
     });
   }
 
-  const arr = document.getElementsByTagName('div');
+  // const arr = document.getElementsByTagName('div');
   const NewDiv = document.createElement('div');
   const urlImage = 'img/background-image.jpg';
   NewDiv.style.backgroundImage=`background-image:url(${urlImage})`;
@@ -226,18 +251,6 @@ document.querySelector('.english-button').addEventListener('click',(evt) => {
   document.querySelector('.english-slide').classList.add('showing');
   document.querySelector('.last').classList.remove('showing');
 });
-
-// slider on js
-const slides = document.querySelectorAll('#slides .slide');
-let currentSlide = 0;
-const Interval = 8500; //time for change pictures
-const slideInterval = setInterval(nextSlide,Interval);
-// default time = 8500
-function nextSlide() {
-  slides[currentSlide].className = slides[currentSlide].className.replace(' showing-slide','');
-  currentSlide = (currentSlide+1)%slides.length;
-  slides[currentSlide].className += ' showing-slide';
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   const NewDiv = document.createElement('div');
