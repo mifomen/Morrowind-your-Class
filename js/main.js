@@ -11,7 +11,7 @@ let Language=true;
 // slider on js
 const slides = document.querySelectorAll('#slides .slide');
 let currentSlide = 0;
-const Interval = 1500; //time for change pictures
+const Interval = 8500; //time for change picturesdefault time = 8500
 const nextSlide = () => {
   slides[currentSlide].className = slides[currentSlide].className.replace(' showing-slide','');
   currentSlide = (currentSlide+1)%slides.length;
@@ -21,9 +21,8 @@ const nextSlide = () => {
 const initSliderStart = () => {
   const startSlider = setInterval(nextSlide,Interval); //eslint-disable-line
 };
-// default time = 18500
 
-
+//функция для тестирования
 const test = function () { //eslint-disable-line
   return console.log('C=' + CombatIndex + ' M=' + MagicIndex + ' S=' + StealthIndex) //eslint-disable-line
 };
@@ -238,12 +237,12 @@ startGameOnEngLng.addEventListener('click',(evt) => {
 
   newLink.textContent='Start';
 
-  newLink.onclick = function (EVT) {
-    EVT.preventDefault();
+  newLink.onclick = function (evet) {
+    evet.preventDefault();
     document.querySelector('.english-slide').classList.remove('showing');
-    const ARR = document.getElementsByTagName('div');
-    ARR[N-1].classList.remove('showing');
-    ARR[N].classList.add('showing');
+    // const ARR = document.getElementsByTagName('div');
+    arr[N-1].classList.remove('showing');
+    arr[N].classList.add('showing');
   };
   NewDiv.appendChild(newLink);
   body.insertBefore(NewDiv,body.children[child+1]);
